@@ -20928,7 +20928,7 @@ var PDFFunctionFactory = function () {
   function PDFFunctionFactory(_ref) {
     var xref = _ref.xref,
         _ref$isEvalSupported = _ref.isEvalSupported,
-        isEvalSupported = _ref$isEvalSupported === undefined ? true : _ref$isEvalSupported;
+        isEvalSupported = _ref$isEvalSupported === undefined ? false : _ref$isEvalSupported;
 
     _classCallCheck(this, PDFFunctionFactory);
 
@@ -22035,8 +22035,8 @@ exports.PostScriptCompiler = PostScriptCompiler;
 "use strict";
 
 
-var pdfjsVersion = '2.0.123';
-var pdfjsBuild = 'eb8a93c9b';
+var pdfjsVersion = '2.0.125';
+var pdfjsBuild = 'b44d1e0ec';
 var pdfjsCoreWorker = __w_pdfjs_require__(71);
 exports.WorkerMessageHandler = pdfjsCoreWorker.WorkerMessageHandler;
 
@@ -22241,7 +22241,7 @@ var WorkerMessageHandler = {
     var cancelXHRs = null;
     var WorkerTasks = [];
     var apiVersion = docParams.apiVersion;
-    var workerVersion = '2.0.123';
+    var workerVersion = '2.0.125';
     if (apiVersion !== null && apiVersion !== workerVersion) {
       throw new Error('The API version "' + apiVersion + '" does not match ' + ('the Worker version "' + workerVersion + '".'));
     }
@@ -32694,7 +32694,7 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
     disableFontFace: false,
     nativeImageDecoderSupport: _util.NativeImageDecoding.DECODE,
     ignoreErrors: false,
-    isEvalSupported: true
+    isEvalSupported: false
   };
   function NativeImageDecoder(_ref) {
     var xref = _ref.xref,
